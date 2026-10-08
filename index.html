@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kabamba Analytics | Capital Valuation Engines & Wealth Planning</title>
+  <title>Kabamba Analytics | Institutional Valuation Engines & Wealth Planning</title>
   
-  <meta property="og:title" content="Kabamba Analytics | Financial Tools & Valuation Engines" />
-  <meta property="og:description" content="Interactive discounted cash flow models, debt service calculators, and FIRE wealth projection engines." />
+  <meta property="og:title" content="Kabamba Analytics | Capital Valuation Engines" />
+  <meta property="og:description" content="Institutional discounted cash flow models, project finance appraisal engines, and debt service coverage analytics." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kabamba.org" />
   
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -17,141 +18,169 @@
       theme: {
         extend: {
           colors: {
-            brandDark: '#0a0f1d',
-            cardBg: 'rgba(15, 23, 42, 0.75)',
+            brandDark: '#0B0F17',
+            cardDark: '#111726',
+            accentGold: '#F59E0B',
           }
         }
       }
     }
   </script>
+  <style>
+    .glass-card {
+      background: rgba(17, 23, 38, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .gold-glow {
+      box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.15);
+    }
+  </style>
 </head>
 
 <body class="bg-brandDark text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black">
 
-  <div class="fixed inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+  <!-- Background Mesh Glow -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/3 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+  </div>
 
-  <!-- Header -->
-  <header class="relative border-b border-slate-800/80 backdrop-blur-md sticky top-0 z-50 bg-brandDark/80">
-    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <span class="text-2xl font-black tracking-tight text-white">KABAMBA<span class="text-amber-500">.</span>ORG</span>
-        <span class="text-[10px] uppercase tracking-widest font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">Analytics Hub</span>
+  <!-- Header Navigation -->
+  <header class="relative z-10 max-w-6xl mx-auto w-full px-6 py-8 flex items-center justify-between border-b border-slate-800/80">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center font-bold text-slate-950 text-xl shadow-lg shadow-amber-500/20">
+        K
       </div>
-      <nav class="flex items-center space-x-6 text-sm font-medium text-slate-400">
-        <a href="#featured" class="hover:text-white transition">Featured Case Study</a>
-        <a href="#models" class="hover:text-white transition">Valuation Engines</a>
-        <a href="https://github.com/RossiKabamba" target="_blank" class="text-slate-300 hover:text-amber-400 transition font-mono text-xs border border-slate-700 px-3 py-1.5 rounded-lg bg-slate-900/50">GitHub ↗</a>
-      </nav>
+      <span class="text-xl font-bold tracking-tight text-white">Kabamba <span class="text-amber-400 font-mono text-sm">ANALYTICS</span></span>
     </div>
+    <nav class="flex items-center space-x-6 text-sm font-medium text-slate-400">
+      <a href="#models" class="hover:text-amber-400 transition-colors">Valuation Engines</a>
+      <a href="https://kabamba-appraisal-tool.streamlit.app" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition font-mono text-xs">
+        App Engine ↗
+      </a>
+    </nav>
   </header>
 
-  <main class="relative max-w-6xl mx-auto px-6 pt-16 pb-24 space-y-16">
-
-    <!-- Hero -->
-    <div class="max-w-3xl space-y-6">
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold">
-        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-        <span>Institutional Financial Modeling & Infrastructure</span>
+  <!-- Main Showcase -->
+  <main class="relative z-10 max-w-6xl mx-auto px-6 pt-12 pb-24 space-y-16">
+    
+    <!-- Hero Section -->
+    <section class="text-center space-y-6 max-w-3xl mx-auto">
+      <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 tracking-wide uppercase">
+        Institutional Capital Appraisal Frameworks
       </div>
-      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-        Capital Valuation Engines & Interactive Financial Suite
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+        Precision Financial Engineering & Project Analytics
       </h1>
-      <p class="text-lg text-slate-400 leading-relaxed">
-        High-precision financial modeling tools designed for junior mining appraisal, debt service coverage analysis, cash-flow discounting, and multi-currency retirement math.
+      <p class="text-slate-400 text-lg leading-relaxed">
+        Interactive discounted cash flow engines, debt amortization schedules, hurdle rate sensitivity analysis, and project valuation suites.
       </p>
-    </div>
-
-    <!-- Featured Case Study Banner -->
-    <section id="featured" class="relative rounded-3xl border border-amber-500/30 bg-gradient-to-r from-slate-900 via-slate-900/90 to-amber-950/30 p-8 sm:p-10 shadow-2xl overflow-hidden">
-      <div class="absolute -right-10 -bottom-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-      
-      <div class="relative flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-        <div class="space-y-4 max-w-2xl">
-          <div class="flex items-center space-x-3">
-            <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 text-xs font-mono font-bold tracking-wide uppercase border border-amber-500/30">Case Study Highlight</span>
-            <span class="text-xs font-mono text-slate-400">Published Models</span>
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-bold text-white">10-Year Junior Copper Development Model</h2>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Operational breakdown analyzing a $25M senior debt facility at 7.50% interest over a 10-year mine life. Includes hurdle rate sensitivities, debt service schedules, and net present value calculations.
-          </p>
-          <div class="grid grid-cols-3 gap-4 pt-2 font-mono text-xs">
-            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800">
-              <span class="text-slate-500 block">CapEx Facility</span>
-              <span class="text-amber-400 font-bold text-sm">$25.0M</span>
-            </div>
-            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800">
-              <span class="text-slate-500 block">Hurdle Rate</span>
-              <span class="text-emerald-400 font-bold text-sm">10.00%</span>
-            </div>
-            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800">
-              <span class="text-slate-500 block">Term Length</span>
-              <span class="text-blue-400 font-bold text-sm">10 Years</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex-shrink-0">
-          <a href="https://kabamba-appraisal-tool.streamlit.app" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-2xl transition shadow-xl shadow-amber-500/20 group">
-            <span>Launch Case Study</span>
-            <span class="ml-2 group-hover:translate-x-1 transition-transform">➔</span>
-          </a>
-        </div>
-      </div>
     </section>
 
-    <!-- App Cards -->
-    <section id="models" class="space-y-6">
-      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-        <h3 class="text-xl font-bold text-white">Interactive Decision Dashboards</h3>
-        <span class="text-xs font-mono text-slate-500">Streamlit Cloud Hosted</span>
+    <!-- Models Grid -->
+    <section id="models" class="space-y-8">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-bold tracking-tight text-white">Featured Case Studies</h2>
+        <span class="text-xs text-slate-400 font-mono">Live Interactive Suites</span>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
-
-        <!-- Card 1: Investment Valuation Engine -->
-        <div class="cardBg border border-slate-800 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-700 transition shadow-2xl backdrop-blur-md relative group">
-          <div class="space-y-4">
-            <div class="flex justify-between items-start">
-              <div class="p-3 bg-blue-500/10 border border-blue-500/20 rounded-xl text-blue-400 font-bold text-xl">
-                📈
-              </div>
-              <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">
-                Appraisal Tool
+        
+        <!-- CARD 1: 10-Year Junior Copper Development Model -->
+        <div class="glass-card border border-slate-800 hover:border-amber-500/40 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 gold-glow relative group">
+          <div class="absolute -top-px left-8 right-8 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent"></div>
+          
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider">
+                Mining & Metals
               </span>
+              <span class="text-xs text-slate-400 font-mono">10-Yr Mine Life</span>
             </div>
-            <h4 class="text-2xl font-bold text-white group-hover:text-blue-400 transition">Capital Investment Appraisal Engine</h4>
-            <p class="text-slate-400 text-sm leading-relaxed">
-              Calculate loan amortization schedules, net present value (NPV), internal rate of return (IRR), and scenario sensitivity metrics.
-            </p>
+
+            <div>
+              <h3 class="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors">
+                10-Year Junior Copper Development Model
+              </h3>
+              <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                Project finance appraisal analyzing a <strong>$25M senior debt facility</strong> at 7.50% interest over a 10-year mine lifecycle (5-year pre-production lead time + 5-year active production phase).
+              </p>
+            </div>
+
+            <!-- Financial Metrics Grid -->
+            <div class="grid grid-cols-3 gap-3 pt-2">
+              <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 text-center">
+                <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-medium">Facility</span>
+                <span class="block text-base font-bold text-slate-100 mt-0.5">$25.0M</span>
+              </div>
+              <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 text-center">
+                <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-medium">Interest Rate</span>
+                <span class="block text-base font-bold text-amber-400 mt-0.5">7.50%</span>
+              </div>
+              <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 text-center">
+                <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-medium">Hurdle</span>
+                <span class="block text-base font-bold text-slate-100 mt-0.5">10.0%</span>
+              </div>
+            </div>
           </div>
+
           <div class="pt-8">
-            <a href="https://kabamba-appraisal-tool.streamlit.app/?scenario=Junior+Copper+Development&currency=%24&loan=25000000.00&rate=7.50&term=10&fee=1.00&equity=5000000.00&hurdle=10.00&cfs=0.00%2C0.00%2C0.00%2C0.00%2C0.00%2C18500000.00%2C18500000.00%2C18500000.00%2C18500000.00%2C18500000.00" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3.5 rounded-xl transition shadow-lg block border border-slate-700">
-  Launch Appraisal Engine ➔
-</a>
+            <a 
+              href="https://kabamba-appraisal-tool.streamlit.app/?scenario=Junior+Copper+Development&currency=%24&loan=25000000.00&rate=7.50&term=10&fee=1.00&equity=5000000.00&hurdle=10.00&cfs=0.00%2C0.00%2C0.00%2C0.00%2C0.00%2C18500000.00%2C18500000.00%2C18500000.00%2C18500000.00%2C18500000.00" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-full inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold py-3.5 px-6 rounded-xl transition shadow-lg shadow-amber-500/10 group-hover:shadow-amber-500/20"
+            >
+              <span>Launch Appraisal Engine</span>
+              <span class="ml-2 transition-transform duration-200 group-hover:translate-x-1">➔</span>
+            </a>
           </div>
         </div>
 
-        <!-- Card 2: FIRE & Wealth Tracker -->
-        <div class="cardBg border border-slate-800 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-700 transition shadow-2xl backdrop-blur-md relative group">
-          <div class="space-y-4">
-            <div class="flex justify-between items-start">
-              <div class="p-3 bg-amber-500/10 border border-amber-500/20 rounded-xl text-amber-400 font-bold text-xl">
-                🔥
-              </div>
-              <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
-                FIRE Calculator
+        <!-- CARD 2: Custom Investor Suite -->
+        <div class="glass-card border border-slate-800 hover:border-slate-700 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative group">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 uppercase tracking-wider">
+                Custom Investor Mode
               </span>
+              <span class="text-xs text-slate-400 font-mono">Dynamic Parameters</span>
             </div>
-            <h4 class="text-2xl font-bold text-white group-hover:text-amber-400 transition">FIRE & Coast FIRE Calculator</h4>
-            <p class="text-slate-400 text-sm leading-relaxed">
-              Bilingual (EN/FR), multi-currency financial independence simulator modeling compound accumulation, inflation adjustments, and target retirement horizons.
-            </p>
+
+            <div>
+              <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                General Debt & Cash Flow Appraisal Engine
+              </h3>
+              <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                Flexible valuation framework supporting custom cash flow structures, variable debt sizing, equity commitment overrides, and real-time hurdle sensitivities.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3 pt-2">
+              <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 text-center">
+                <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-medium">Custom Debt</span>
+                <span class="block text-base font-bold text-slate-100 mt-0.5">Flexible</span>
+              </div>
+              <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 text-center">
+                <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-medium">Outputs</span>
+                <span class="block text-base font-bold text-blue-400 mt-0.5">NPV / IRR</span>
+              </div>
+              <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 text-center">
+                <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-medium">Schedule</span>
+                <span class="block text-base font-bold text-slate-100 mt-0.5">Amortized</span>
+              </div>
+            </div>
           </div>
 
           <div class="pt-8">
-            <a href="https://kabamba-fire-calculator.streamlit.app" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3.5 rounded-xl transition shadow-lg block">
-              Launch FIRE Calculator ➔
+            <a 
+              href="https://kabamba-appraisal-tool.streamlit.app" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3.5 rounded-xl transition shadow-lg block border border-slate-700"
+            >
+              Open Blank Workspace ➔
             </a>
           </div>
         </div>
@@ -161,13 +190,14 @@
 
   </main>
 
-  <footer class="border-t border-slate-800/80 bg-brandDark/90 py-8">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
-      <div>© 2026 Rossi Kabamba. All rights reserved.</div>
-      <div class="flex items-center space-x-6">
-        <span>GitHub Pages Hosted</span>
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-slate-800/80 bg-slate-950/50 py-8 text-center text-xs text-slate-400 font-mono">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>© 2026 Kabamba Analytics. All rights reserved.</div>
+      <div class="flex items-center space-x-4">
+        <span>Capital Valuation Engines</span>
         <span>•</span>
-        <span>Streamlit Cloud Engine</span>
+        <span>Project Finance</span>
       </div>
     </div>
   </footer>
