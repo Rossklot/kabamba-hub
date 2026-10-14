@@ -54,11 +54,19 @@
       </div>
       <span class="text-xl font-bold tracking-tight text-white">Kabamba <span class="text-amber-400 font-mono text-sm">ANALYTICS</span></span>
     </div>
+    
     <nav class="flex items-center space-x-6 text-sm font-medium text-slate-400">
-      <a href="#about" class="hover:text-amber-400 transition-colors">Overview</a>
-      <a href="#models" class="hover:text-amber-400 transition-colors">Valuation Engines</a>
-      <a href="#case-study" class="hover:text-amber-400 transition-colors">Case Study</a>
-      <a href="https://kabamba-appraisal-tool.streamlit.app" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition font-mono text-xs">
+      <a href="#about" class="hover:text-amber-400 transition-colors hidden sm:inline">Overview</a>
+      <a href="#models" class="hover:text-amber-400 transition-colors hidden sm:inline">Valuation Engines</a>
+      <a href="#case-studies" class="hover:text-amber-400 transition-colors">Case Studies</a>
+      
+      <!-- Language Toggle (EN / FR) -->
+      <div class="flex items-center bg-slate-900 border border-slate-800 rounded-lg p-1 font-mono text-xs">
+        <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded bg-amber-500 text-slate-950 font-bold transition">EN</button>
+        <button onclick="setLanguage('fr')" id="btn-fr" class="px-2 py-1 rounded text-slate-400 hover:text-white transition">FR</button>
+      </div>
+
+      <a href="https://kabamba-appraisal-tool.streamlit.app" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition font-mono text-xs hidden md:inline-block">
         App Engine ↗
       </a>
     </nav>
@@ -69,13 +77,13 @@
     
     <!-- Hero Section -->
     <section class="text-center space-y-6 max-w-3xl mx-auto">
-      <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 tracking-wide uppercase">
+      <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 tracking-wide uppercase" data-i18n="hero-tag">
         Institutional Capital Appraisal Frameworks
       </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight" data-i18n="hero-title">
         Precision Financial Engineering & Project Analytics
       </h1>
-      <p class="text-slate-400 text-lg leading-relaxed">
+      <p class="text-slate-400 text-lg leading-relaxed" data-i18n="hero-desc">
         Interactive discounted cash flow engines, debt amortization schedules, hurdle rate sensitivity analysis, and project valuation suites.
       </p>
     </section>
@@ -83,11 +91,11 @@
     <!-- Platform Purpose & Architecture Overview -->
     <section id="about" class="space-y-8 border-y border-slate-800/80 py-16">
       <div class="max-w-3xl">
-        <span class="text-amber-400 font-mono text-xs uppercase tracking-wider">Platform Architecture</span>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-2 mb-4">
+        <span class="text-amber-400 font-mono text-xs uppercase tracking-wider" data-i18n="arch-subtitle">Platform Architecture</span>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-2 mb-4" data-i18n="arch-title">
           Quantitative Valuation & Financial Independence Engines
         </h2>
-        <p class="text-slate-300 leading-relaxed">
+        <p class="text-slate-300 leading-relaxed" data-i18n="arch-desc">
           Kabamba Analytics is a specialized web hub and quantitative toolset designed to provide advanced financial modeling, valuation engines, and decision-support analytics tailored for capital projects, junior mining exploration, and long-term financial independence planning.
         </p>
       </div>
@@ -95,24 +103,24 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="glass-card border border-slate-800 rounded-2xl p-6 hover:border-amber-500/40 transition-colors">
           <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold mb-4 font-mono text-sm">01</div>
-          <h3 class="text-white font-semibold mb-2">Valuation & Appraisal</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
+          <h3 class="text-white font-semibold mb-2" data-i18n="pillar-1-title">Valuation & Appraisal</h3>
+          <p class="text-slate-400 text-sm leading-relaxed" data-i18n="pillar-1-desc">
             Computational models built to analyze project cash flows, Net Present Value (NPV), Internal Rate of Return (IRR), and debt service structures with tailored mining asset presets.
           </p>
         </div>
         
         <div class="glass-card border border-slate-800 rounded-2xl p-6 hover:border-amber-500/40 transition-colors">
           <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold mb-4 font-mono text-sm">02</div>
-          <h3 class="text-white font-semibold mb-2">Interactive App Engines</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
+          <h3 class="text-white font-semibold mb-2" data-i18n="pillar-2-title">Interactive App Engines</h3>
+          <p class="text-slate-400 text-sm leading-relaxed" data-i18n="pillar-2-desc">
             Dynamic Streamlit-powered calculators enabling real-time variable alterations, scenario modeling, and instant executive PDF report generation.
           </p>
         </div>
         
         <div class="glass-card border border-slate-800 rounded-2xl p-6 hover:border-amber-500/40 transition-colors">
           <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold mb-4 font-mono text-sm">03</div>
-          <h3 class="text-white font-semibold mb-2">Wealth & FIRE Modeling</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
+          <h3 class="text-white font-semibold mb-2" data-i18n="pillar-3-title">Wealth & FIRE Modeling</h3>
+          <p class="text-slate-400 text-sm leading-relaxed" data-i18n="pillar-3-desc">
             Quantitative tools focused on FIRE and Coast FIRE methodologies, multi-currency compounding interest scenarios, and long-term wealth trajectories.
           </p>
         </div>
@@ -122,33 +130,24 @@
     <!-- Models Grid -->
     <section id="models" class="space-y-8">
       <div class="flex items-center justify-between">
-        <h2 class="text-2xl font-bold tracking-tight text-white">Featured Valuation Engines</h2>
-        <span class="text-xs text-slate-400 font-mono">Live Interactive Suites</span>
+        <h2 class="text-2xl font-bold tracking-tight text-white" data-i18n="engines-heading">Featured Valuation Engines</h2>
+        <span class="text-xs text-slate-400 font-mono" data-i18n="engines-sub">Live Interactive Suites</span>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
         
-        <!-- CARD 1: 10-Year Junior Copper Development Model -->
+        <!-- CARD 1 -->
         <div class="glass-card border border-slate-800 hover:border-amber-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 gold-glow relative group">
           <div class="absolute -top-px left-8 right-8 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent"></div>
-          
           <div class="space-y-5">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider">
-                Mining & Metals
-              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider">Mining & Metals</span>
               <span class="text-xs text-slate-400 font-mono">10-Yr Lifecycle</span>
             </div>
-
             <div>
-              <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
-                10-Year Junior Copper Development
-              </h3>
-              <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                Project finance appraisal analyzing a <strong>$25M senior debt facility</strong> at 7.50% interest over a 10-year mine lifecycle.
-              </p>
+              <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">10-Year Junior Copper Development</h3>
+              <p class="text-slate-400 text-xs mt-2 leading-relaxed">Project finance appraisal analyzing a <strong>$25M senior debt facility</strong> at 7.50% interest over a 10-year mine lifecycle.</p>
             </div>
-
             <div class="grid grid-cols-3 gap-2 pt-2">
               <div class="bg-slate-900/90 border border-slate-800 rounded-lg p-2 text-center">
                 <span class="block text-[9px] uppercase tracking-wider text-slate-400 font-medium">Facility</span>
@@ -164,39 +163,24 @@
               </div>
             </div>
           </div>
-
           <div class="pt-6">
-            <a 
-              href="https://kabamba-appraisal-tool.streamlit.app/?scenario=👤%20Custom%20/%20Individual%20Investor%20(Default)&currency=$&loan=25000000.00&rate=7.50&term=10&fee=1.00&equity=5000000.00&hurdle=10.00&cfs=2500000.00,5200000.00,8800000.00,9500000.00,9500000.00,8200000.00,8000000.00,7100000.00,4500000.00,2800000.00" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="w-full inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold py-3 px-4 rounded-xl transition shadow-lg shadow-amber-500/10 group-hover:shadow-amber-500/20 text-sm"
-            >
-              <span>Launch Engine</span>
-              <span class="ml-2 transition-transform duration-200 group-hover:translate-x-1">➔</span>
+            <a href="https://kabamba-appraisal-tool.streamlit.app/?scenario=👤%20Custom%20/%20Individual%20Investor%20(Default)&currency=$&loan=25000000.00&rate=7.50&term=10&fee=1.00&equity=5000000.00&hurdle=10.00&cfs=2500000.00,5200000.00,8800000.00,9500000.00,9500000.00,8200000.00,8000000.00,7100000.00,4500000.00,2800000.00" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold py-3 px-4 rounded-xl transition shadow-lg shadow-amber-500/10 group-hover:shadow-amber-500/20 text-sm">
+              <span>Launch Engine</span> <span class="ml-2 transition-transform duration-200 group-hover:translate-x-1">➔</span>
             </a>
           </div>
         </div>
 
-        <!-- CARD 2: Future-Present Value Calculator -->
+        <!-- CARD 2 -->
         <div class="glass-card border border-slate-800 hover:border-emerald-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative group">
           <div class="space-y-5">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase tracking-wider">
-                Wealth Accumulation
-              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase tracking-wider">Wealth Accumulation</span>
               <span class="text-xs text-slate-400 font-mono">FIRE Analytics</span>
             </div>
-
             <div>
-              <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
-                Present & Future Value Calculator
-              </h3>
-              <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                Compound growth engine for modeling portfolio accumulation, inflation adjustments, contribution milestones, and Coast FIRE targets.
-              </p>
+              <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Present & Future Value Calculator</h3>
+              <p class="text-slate-400 text-xs mt-2 leading-relaxed">Compound growth engine for modeling portfolio accumulation, inflation adjustments, contribution milestones, and Coast FIRE targets.</p>
             </div>
-
             <div class="grid grid-cols-3 gap-2 pt-2">
               <div class="bg-slate-900/90 border border-slate-800 rounded-lg p-2 text-center">
                 <span class="block text-[9px] uppercase tracking-wider text-slate-400 font-medium">Metrics</span>
@@ -212,38 +196,24 @@
               </div>
             </div>
           </div>
-
           <div class="pt-6">
-            <a 
-              href="https://kabamba-fire-calculator.streamlit.app/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 rounded-xl transition shadow-lg block border border-slate-700 text-sm"
-            >
+            <a href="https://kabamba-fire-calculator.streamlit.app/" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 rounded-xl transition shadow-lg block border border-slate-700 text-sm">
               Launch Calculator ➔
             </a>
           </div>
         </div>
 
-        <!-- CARD 3: Custom Debt Appraisal Suite -->
+        <!-- CARD 3 -->
         <div class="glass-card border border-slate-800 hover:border-blue-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative group">
           <div class="space-y-5">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 uppercase tracking-wider">
-                Custom Workspace
-              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 uppercase tracking-wider">Custom Workspace</span>
               <span class="text-xs text-slate-400 font-mono">Dynamic Parameters</span>
             </div>
-
             <div>
-              <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                General Debt & Cash Flow Engine
-              </h3>
-              <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                Flexible appraisal suite supporting custom cash flow inputs, variable debt sizing, equity commitment overrides, and sensitivity tables.
-              </p>
+              <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">General Debt & Cash Flow Engine</h3>
+              <p class="text-slate-400 text-xs mt-2 leading-relaxed">Flexible appraisal suite supporting custom cash flow inputs, variable debt sizing, equity commitment overrides, and sensitivity tables.</p>
             </div>
-
             <div class="grid grid-cols-3 gap-2 pt-2">
               <div class="bg-slate-900/90 border border-slate-800 rounded-lg p-2 text-center">
                 <span class="block text-[9px] uppercase tracking-wider text-slate-400 font-medium">Debt</span>
@@ -259,14 +229,8 @@
               </div>
             </div>
           </div>
-
           <div class="pt-6">
-            <a 
-              href="https://kabamba-appraisal-tool.streamlit.app" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 rounded-xl transition shadow-lg block border border-slate-700 text-sm"
-            >
+            <a href="https://kabamba-appraisal-tool.streamlit.app" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 rounded-xl transition shadow-lg block border border-slate-700 text-sm">
               Open Workspace ➔
             </a>
           </div>
@@ -275,31 +239,36 @@
       </div>
     </section>
 
-    <!-- Featured Case Study Section -->
-    <section id="case-study" class="space-y-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between">
+    <!-- Featured Case Studies Portfolio Section -->
+    <section id="case-studies" class="space-y-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-800/80 pb-6">
         <div>
-          <span class="text-amber-400 font-mono text-xs uppercase tracking-wider">Featured Case Study</span>
-          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
-            Evaluating Capital Allocation in Mining
-          </h2>
+          <span class="text-amber-400 font-mono text-xs uppercase tracking-wider" data-i18n="case-subtitle">Research & Applications</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1" data-i18n="case-title">Featured Case Studies</h2>
         </div>
-        <span class="text-xs font-mono text-slate-400 mt-2 md:mt-0">10-Year Junior Copper Developer Case Study ⛏️📊</span>
+        <span class="text-xs font-mono text-slate-400 mt-2 md:mt-0" data-i18n="case-count">Portfolio Volume I</span>
       </div>
 
-      <div class="glass-card border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+      <!-- CASE STUDY 1: Junior Copper Developer -->
+      <div class="glass-card border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl space-y-8">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider font-mono">Mining & Metals Project Finance</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mt-2">Evaluating Capital Allocation in Mining: A 10-Year Junior Copper Developer Case Study</h3>
+          </div>
+          <span class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">⛏️📊 DCF & Debt Modeling</span>
+        </div>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
           How do you structure capital allocation, model project debt, and evaluate leverage sensitivity for a junior copper deposit transitioning into operational development? This complete 10-Year Discounted Cash Flow (DCF) & Debt Appraisal Model demonstrates how mine ramp-up profiles, debt service coverage, and equity leverage interact.
         </p>
 
         <!-- Grid Layout for Assumptions & KPIs -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          
-          <!-- Assumptions -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-5">
-            <h3 class="text-amber-400 font-mono text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
+            <h4 class="text-amber-400 font-mono text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
               <span>📌</span> Executive Summary & Core Assumptions
-            </h3>
+            </h4>
             <ul class="space-y-3 text-sm text-slate-300 font-mono">
               <li class="flex justify-between border-b border-slate-800/50 pb-2">
                 <span class="text-slate-400">Initial Equity Outlay:</span>
@@ -320,11 +289,10 @@
             </ul>
           </div>
 
-          <!-- KPIs -->
           <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-5">
-            <h3 class="text-amber-400 font-mono text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
+            <h4 class="text-amber-400 font-mono text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
               <span>📈</span> Model Key Performance Indicators
-            </h3>
+            </h4>
             <ul class="space-y-3 text-sm text-slate-300 font-mono">
               <li class="flex justify-between border-b border-slate-800/50 pb-2">
                 <span class="text-slate-400">Annual Debt Service:</span>
@@ -347,10 +315,10 @@
         </div>
 
         <!-- NOI Profile Table -->
-        <div class="mb-8 overflow-x-auto">
-          <h3 class="text-amber-400 font-mono text-xs uppercase tracking-wider mb-3 flex items-center gap-2">
+        <div class="overflow-x-auto">
+          <h4 class="text-amber-400 font-mono text-xs uppercase tracking-wider mb-3 flex items-center gap-2">
             <span>📅</span> 10-Year NOI Cash Flow Profile
-          </h3>
+          </h4>
           <table class="w-full text-left text-sm font-mono border-collapse">
             <thead>
               <tr class="border-b border-slate-800 text-slate-400 text-xs">
@@ -384,20 +352,34 @@
           </table>
         </div>
 
-        <!-- Action Button -->
         <div class="flex justify-end pt-4 border-t border-slate-800">
-          <a 
-            href="https://kabamba-appraisal-tool.streamlit.app/?scenario=👤%20Custom%20/%20Individual%20Investor%20(Default)&currency=$&loan=25000000.00&rate=7.50&term=10&fee=1.00&equity=5000000.00&hurdle=10.00&cfs=2500000.00,5200000.00,8800000.00,9500000.00,9500000.00,8200000.00,8000000.00,7100000.00,4500000.00,2800000.00" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-sm transition shadow-lg shadow-amber-500/10"
-          >
+          <a href="https://kabamba-appraisal-tool.streamlit.app/?scenario=👤%20Custom%20/%20Individual%20Investor%20(Default)&currency=$&loan=25000000.00&rate=7.50&term=10&fee=1.00&equity=5000000.00&hurdle=10.00&cfs=2500000.00,5200000.00,8800000.00,9500000.00,9500000.00,8200000.00,8000000.00,7100000.00,4500000.00,2800000.00" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-sm transition shadow-lg shadow-amber-500/10">
             <span>Test the Interactive Model & Export Executive PDF Report</span>
             <span>↗</span>
           </a>
         </div>
-
       </div>
+
+      <!-- CASE STUDY 2: Placeholder for Additional Sector Model -->
+      <div class="glass-card border border-slate-800/60 rounded-2xl p-6 sm:p-8 opacity-80 hover:opacity-100 transition-opacity flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 uppercase tracking-wider font-mono">Retirement & Wealth Independence</span>
+            <span class="text-xs text-slate-400 font-mono">FIRE Modeling</span>
+          </div>
+          <h3 class="text-xl font-bold text-white">Coast FIRE Portfolio Trajectory & Compounding Sensitivity Analysis</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Evaluating multi-currency portfolio compounding horizons, safe withdrawal rate stress testing, and milestone accumulation curves for long-term financial independence.
+          </p>
+        </div>
+        <div class="pt-6 flex justify-end">
+          <a href="https://kabamba-fire-calculator.streamlit.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium text-xs border border-slate-700 transition">
+            <span>Explore FIRE Calculator</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+
     </section>
 
   </main>
@@ -407,12 +389,80 @@
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
       <div>© 2026 Kabamba Analytics. All rights reserved.</div>
       <div class="flex items-center space-x-4">
-        <span>Capital Valuation Engines</span>
+        <span data-i18n="footer-tag-1">Capital Valuation Engines</span>
         <span>•</span>
-        <span>Project Finance</span>
+        <span data-i18n="footer-tag-2">Project Finance</span>
       </div>
     </div>
   </footer>
+
+  <!-- Bilingual Dictionary & Toggle Script -->
+  <script>
+    const translations = {
+      en: {
+        "hero-tag": "Institutional Capital Appraisal Frameworks",
+        "hero-title": "Precision Financial Engineering & Project Analytics",
+        "hero-desc": "Interactive discounted cash flow engines, debt amortization schedules, hurdle rate sensitivity analysis, and project valuation suites.",
+        "arch-subtitle": "Platform Architecture",
+        "arch-title": "Quantitative Valuation & Financial Independence Engines",
+        "arch-desc": "Kabamba Analytics is a specialized web hub and quantitative toolset designed to provide advanced financial modeling, valuation engines, and decision-support analytics tailored for capital projects, junior mining exploration, and long-term financial independence planning.",
+        "pillar-1-title": "Valuation & Appraisal",
+        "pillar-1-desc": "Computational models built to analyze project cash flows, Net Present Value (NPV), Internal Rate of Return (IRR), and debt service structures with tailored mining asset presets.",
+        "pillar-2-title": "Interactive App Engines",
+        "pillar-2-desc": "Dynamic Streamlit-powered calculators enabling real-time variable alterations, scenario modeling, and instant executive PDF report generation.",
+        "pillar-3-title": "Wealth & FIRE Modeling",
+        "pillar-3-desc": "Quantitative tools focused on FIRE and Coast FIRE methodologies, multi-currency compounding interest scenarios, and long-term wealth trajectories.",
+        "engines-heading": "Featured Valuation Engines",
+        "engines-sub": "Live Interactive Suites",
+        "case-subtitle": "Research & Applications",
+        "case-title": "Featured Case Studies",
+        "case-count": "Portfolio Volume I",
+        "footer-tag-1": "Capital Valuation Engines",
+        "footer-tag-2": "Project Finance"
+      },
+      fr: {
+        "hero-tag": "Cadres d'Évaluation du Capital Institutionnel",
+        "hero-title": "Ingénierie Financière de Précision & Analyses de Projets",
+        "hero-desc": "Moteurs de flux de trésorerie actualisés interactifs, tableaux d'amortissement de la dette, analyse de sensibilité des taux d'actualisation et suites d'évaluation de projets.",
+        "arch-subtitle": "Architecture de la Plateforme",
+        "arch-title": "Moteurs d'Évaluation Quantitative & d'Indépendance Financière",
+        "arch-desc": "Kabamba Analytics est un carrefour web spécialisé et un ensemble d'outils quantitatifs conçus pour fournir des modèles financiers avancés, des moteurs d'évaluation et des analyses d'aide à la décision adaptés aux projets d'investissement, à l'exploration minière junior et à la planification à long terme de l'indépendance financière.",
+        "pillar-1-title": "Évaluation & Expertise",
+        "pillar-1-desc": "Modèles informatiques conçus pour analyser les flux de trésorerie des projets, la Valeur Actuelle Nette (VAN), le Taux de Rendement Interne (TRI) et les structures de service de la dette avec des préréglages d'actifs miniers.",
+        "pillar-2-title": "Moteurs d'Applications Interactifs",
+        "pillar-2-desc": "Calculateurs dynamiques propulsés par Streamlit permettant des modifications de variables en temps real, la modélisation de scénarios et la génération instantanée de rapports PDF exécutifs.",
+        "pillar-3-title": "Modélisation de Patrimoine & FIRE",
+        "pillar-3-desc": "Outils quantitatifs axés sur les méthodologies FIRE et Coast FIRE, les scénarios d'intérêts composés multi-devises et les trajectoires de patrimoine à long terme.",
+        "engines-heading": "Moteurs d'Évaluation en Vedette",
+        "engines-sub": "Suites Interactives en Ligne",
+        "case-subtitle": "Recherche & Applications",
+        "case-title": "Études de Cas en Vedette",
+        "case-count": "Volume du Portfolio I",
+        "footer-tag-1": "Moteurs d'Évaluation du Capital",
+        "footer-tag-2": "Financement de Projets"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      // Update toggle button states
+      if (lang === 'en') {
+        document.getElementById('btn-en').className = "px-2 py-1 rounded bg-amber-500 text-slate-950 font-bold transition";
+        document.getElementById('btn-fr').className = "px-2 py-1 rounded text-slate-400 hover:text-white transition";
+        document.documentElement.setAttribute('lang', 'en');
+      } else {
+        document.getElementById('btn-fr').className = "px-2 py-1 rounded bg-amber-500 text-slate-950 font-bold transition";
+        document.getElementById('btn-en').className = "px-2 py-1 rounded text-slate-400 hover:text-white transition";
+        document.documentElement.setAttribute('lang', 'fr');
+      }
+    }
+  </script>
 
 </body>
 </html>
