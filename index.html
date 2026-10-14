@@ -55,7 +55,9 @@
       <span class="text-xl font-bold tracking-tight text-white">Kabamba <span class="text-amber-400 font-mono text-sm">ANALYTICS</span></span>
     </div>
     <nav class="flex items-center space-x-6 text-sm font-medium text-slate-400">
+      <a href="#about" class="hover:text-amber-400 transition-colors">Overview</a>
       <a href="#models" class="hover:text-amber-400 transition-colors">Valuation Engines</a>
+      <a href="#case-study" class="hover:text-amber-400 transition-colors">Case Study</a>
       <a href="https://kabamba-appraisal-tool.streamlit.app" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition font-mono text-xs">
         App Engine ↗
       </a>
@@ -63,7 +65,7 @@
   </header>
 
   <!-- Main Showcase -->
-  <main class="relative z-10 max-w-6xl mx-auto px-6 pt-12 pb-24 space-y-16">
+  <main class="relative z-10 max-w-6xl mx-auto px-6 pt-12 pb-24 space-y-20">
     
     <!-- Hero Section -->
     <section class="text-center space-y-6 max-w-3xl mx-auto">
@@ -76,6 +78,45 @@
       <p class="text-slate-400 text-lg leading-relaxed">
         Interactive discounted cash flow engines, debt amortization schedules, hurdle rate sensitivity analysis, and project valuation suites.
       </p>
+    </section>
+
+    <!-- Platform Purpose & Architecture Overview -->
+    <section id="about" class="space-y-8 border-y border-slate-800/80 py-16">
+      <div class="max-w-3xl">
+        <span class="text-amber-400 font-mono text-xs uppercase tracking-wider">Platform Architecture</span>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-2 mb-4">
+          Quantitative Valuation & Financial Independence Engines
+        </h2>
+        <p class="text-slate-300 leading-relaxed">
+          Kabamba Analytics is a specialized web hub and quantitative toolset designed to provide advanced financial modeling, valuation engines, and decision-support analytics tailored for capital projects, junior mining exploration, and long-term financial independence planning.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card border border-slate-800 rounded-2xl p-6 hover:border-amber-500/40 transition-colors">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold mb-4 font-mono text-sm">01</div>
+          <h3 class="text-white font-semibold mb-2">Valuation & Appraisal</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Computational models built to analyze project cash flows, Net Present Value (NPV), Internal Rate of Return (IRR), and debt service structures with tailored mining asset presets.
+          </p>
+        </div>
+        
+        <div class="glass-card border border-slate-800 rounded-2xl p-6 hover:border-amber-500/40 transition-colors">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold mb-4 font-mono text-sm">02</div>
+          <h3 class="text-white font-semibold mb-2">Interactive App Engines</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Dynamic Streamlit-powered calculators enabling real-time variable alterations, scenario modeling, and instant executive PDF report generation.
+          </p>
+        </div>
+        
+        <div class="glass-card border border-slate-800 rounded-2xl p-6 hover:border-amber-500/40 transition-colors">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold mb-4 font-mono text-sm">03</div>
+          <h3 class="text-white font-semibold mb-2">Wealth & FIRE Modeling</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Quantitative tools focused on FIRE and Coast FIRE methodologies, multi-currency compounding interest scenarios, and long-term wealth trajectories.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Models Grid -->
@@ -229,6 +270,131 @@
               Open Workspace ➔
             </a>
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Featured Case Study Section -->
+    <section id="case-study" class="space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between">
+        <div>
+          <span class="text-amber-400 font-mono text-xs uppercase tracking-wider">Featured Case Study</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
+            Evaluating Capital Allocation in Mining
+          </h2>
+        </div>
+        <span class="text-xs font-mono text-slate-400 mt-2 md:mt-0">10-Year Junior Copper Developer Case Study ⛏️📊</span>
+      </div>
+
+      <div class="glass-card border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+          How do you structure capital allocation, model project debt, and evaluate leverage sensitivity for a junior copper deposit transitioning into operational development? This complete 10-Year Discounted Cash Flow (DCF) & Debt Appraisal Model demonstrates how mine ramp-up profiles, debt service coverage, and equity leverage interact.
+        </p>
+
+        <!-- Grid Layout for Assumptions & KPIs -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          
+          <!-- Assumptions -->
+          <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-5">
+            <h3 class="text-amber-400 font-mono text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
+              <span>📌</span> Executive Summary & Core Assumptions
+            </h3>
+            <ul class="space-y-3 text-sm text-slate-300 font-mono">
+              <li class="flex justify-between border-b border-slate-800/50 pb-2">
+                <span class="text-slate-400">Initial Equity Outlay:</span>
+                <span class="text-white font-semibold">$5.0M</span>
+              </li>
+              <li class="flex justify-between border-b border-slate-800/50 pb-2">
+                <span class="text-slate-400">Project Debt Financing:</span>
+                <span class="text-white font-semibold">$25.0M (7.50% / 10-Yr, 1% fee)</span>
+              </li>
+              <li class="flex justify-between border-b border-slate-800/50 pb-2">
+                <span class="text-slate-400">Hurdle Rate (Discount):</span>
+                <span class="text-white font-semibold">10.00%</span>
+              </li>
+              <li class="flex justify-between pt-1">
+                <span class="text-slate-400">Copper / AISC Benchmark:</span>
+                <span class="text-white font-semibold">$4.00 / $2.20 lb</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- KPIs -->
+          <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-5">
+            <h3 class="text-amber-400 font-mono text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
+              <span>📈</span> Model Key Performance Indicators
+            </h3>
+            <ul class="space-y-3 text-sm text-slate-300 font-mono">
+              <li class="flex justify-between border-b border-slate-800/50 pb-2">
+                <span class="text-slate-400">Annual Debt Service:</span>
+                <span class="text-white font-semibold">~$3.56M / year</span>
+              </li>
+              <li class="flex justify-between border-b border-slate-800/50 pb-2">
+                <span class="text-slate-400">Net Present Value (NPV):</span>
+                <span class="text-emerald-400 font-semibold">+$13.47M (@ 10%)</span>
+              </li>
+              <li class="flex justify-between border-b border-slate-800/50 pb-2">
+                <span class="text-slate-400">Internal Rate of Return:</span>
+                <span class="text-emerald-400 font-semibold">43.83% IRR</span>
+              </li>
+              <li class="flex justify-between pt-1">
+                <span class="text-slate-400">Coverage Analysis:</span>
+                <span class="text-white font-semibold">Robust Peak DSCR Protection</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- NOI Profile Table -->
+        <div class="mb-8 overflow-x-auto">
+          <h3 class="text-amber-400 font-mono text-xs uppercase tracking-wider mb-3 flex items-center gap-2">
+            <span>📅</span> 10-Year NOI Cash Flow Profile
+          </h3>
+          <table class="w-full text-left text-sm font-mono border-collapse">
+            <thead>
+              <tr class="border-b border-slate-800 text-slate-400 text-xs">
+                <th class="py-3 px-4 font-medium">Operational Phase</th>
+                <th class="py-3 px-4 font-medium">Year</th>
+                <th class="py-3 px-4 font-medium text-right">Expected NOI ($)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/50 text-slate-300">
+              <tr>
+                <td class="py-3 px-4">Ramp-Up & Commissioning</td>
+                <td class="py-3 px-4 text-slate-400">Y1–Y2</td>
+                <td class="py-3 px-4 text-right">$2,500,000 ➔ $5,200,000</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">High-Grade Extraction</td>
+                <td class="py-3 px-4 text-slate-400">Y3–Y5</td>
+                <td class="py-3 px-4 text-right">$8,800,000 ➔ $9,500,000 / yr</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">Steady-State Production</td>
+                <td class="py-3 px-4 text-slate-400">Y6–Y8</td>
+                <td class="py-3 px-4 text-right">$8,200,000 ➔ $7,100,000 / yr</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">Tailings & Closure</td>
+                <td class="py-3 px-4 text-slate-400">Y9–Y10</td>
+                <td class="py-3 px-4 text-right">$4,500,000 ➔ $2,800,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Action Button -->
+        <div class="flex justify-end pt-4 border-t border-slate-800">
+          <a 
+            href="https://kabamba-appraisal-tool.streamlit.app/?scenario=👤%20Custom%20/%20Individual%20Investor%20(Default)&currency=$&loan=25000000.00&rate=7.50&term=10&fee=1.00&equity=5000000.00&hurdle=10.00&cfs=2500000.00,5200000.00,8800000.00,9500000.00,9500000.00,8200000.00,8000000.00,7100000.00,4500000.00,2800000.00" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-sm transition shadow-lg shadow-amber-500/10"
+          >
+            <span>Test the Interactive Model & Export Executive PDF Report</span>
+            <span>↗</span>
+          </a>
         </div>
 
       </div>
