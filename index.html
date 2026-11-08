@@ -388,7 +388,7 @@
   <!-- Header -->
   <div class="text-center mb-16">
     <span class="text-xs font-semibold uppercase tracking-wider text-amber-500 bg-amber-500/10 px-3 py-1 rounded-full inline-block mb-3">
-      Featured Case Study (Conceptual Model)
+      Featured Case Study
     </span>
     <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
       Junior Gold Development: Aurum Gold Ventures
@@ -429,8 +429,8 @@
     </div>
   </div>
 
-  <!-- Main Content Cards (Generalized Profile, Scope, and Financial Outlook) -->
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+  <!-- Main Content Cards (Profile, Scope, Financial Outlook + Action Button) -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     
     <!-- Generalized Profile -->
     <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
@@ -468,7 +468,7 @@
       </div>
     </div>
 
-    <!-- Financial Outlook -->
+    <!-- Financial Outlook & Appraisal Tool Link -->
     <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
       <div>
         <div class="flex items-center space-x-3 mb-4">
@@ -477,43 +477,23 @@
           </div>
           <h3 class="text-xl font-bold text-white">Economic Projections</h3>
         </div>
-        <ul class="space-y-3 text-slate-400 text-sm">
+        <ul class="space-y-3 text-slate-400 text-sm mb-6">
           <li><strong class="text-slate-200">CapEx Structure:</strong> $4M total ($2M upfront, $2M staged Year 1).</li>
           <li><strong class="text-slate-200">Cash Flow:</strong> $1.5M annual net profit starting Year 2 (keyed to ~$2,500/oz baseline).</li>
           <li><strong class="text-slate-200">NPV Tiers:</strong> +$2.485M @ 15% discount | +$3.681M @ 11% discount.</li>
         </ul>
       </div>
+      
+      <!-- Action Button linking directly to your appraisal tool -->
+      <div>
+        <a href="https://kabamba-appraisal-tool.streamlit.app" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold px-4 py-2.5 rounded-xl transition text-sm shadow-lg shadow-amber-500/10">
+          Launch Appraisal Model 
+          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
     </div>
 
   </div>
-
-  <!-- NEW: Valuation Engines Feature Box -->
-  <div class="bg-gradient-to-r from-slate-900 via-slate-900/90 to-amber-950/20 border border-amber-500/30 rounded-2xl p-8">
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full mb-4">
-        <span>Engine Capability</span>
-      </div>
-      <h3 class="text-2xl font-bold text-white mb-3">Dynamic Valuation Engines</h3>
-      <p class="text-slate-300 text-sm leading-relaxed mb-6">
-        This project template integrates a live sensitivity model allowing stakeholders to instantly adjust gold spot pricing ($\pm \$500/\text{oz}$), recovery yields, and discount rates to recalculate Net Present Value (NPV) and Internal Rate of Return (IRR) on the fly.
-      </p>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-slate-400">
-        <div class="bg-slate-950/50 p-3 rounded-lg border border-slate-800">
-          <span class="text-amber-400 block font-bold mb-1">Spot Price Sensitivity</span>
-          Model adjusts dynamically against global market shifts.
-        </div>
-        <div class="bg-slate-950/50 p-3 rounded-lg border border-slate-800">
-          <span class="text-amber-400 block font-bold mb-1">CAPEX Amortization</span>
-          Automated multi-year depreciation and recovery curves.
-        </div>
-        <div class="bg-slate-950/50 p-3 rounded-lg border border-slate-800">
-          <span class="text-amber-400 block font-bold mb-1">ESG Risk Weighting</span>
-          Scored compliance modeling for sustainable capital allocation.
-        </div>
-      </div>
-    </div>
-  </div>
-
 </section>
 
   </main>
